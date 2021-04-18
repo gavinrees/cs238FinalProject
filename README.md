@@ -1,0 +1,1 @@
+Extending the paper: Truthful Aggregation of Budget Proposals by R. Freeman, D. Pennock, D. Peters, J. Wortman Vaughan.

@@ -40,6 +40,18 @@ def get_feasible_allocation(preferences, phantom_function):
 				end = t
 				end_val = mid_val
 
+	return compute_allocation(preferences, phantom_function(start)), start
+
+def moving_market_phantom(num_alts, num_voters):
+	def my_phantom(t):
+		x = np.ones((num_alts, num_voters+1))
+		for i in range(num_voters + 1):
+			x[:,i] = min(t * (num_voters - i), 1.0)
+		return x
+	return my_phantom
+
+
+
 
 
 
